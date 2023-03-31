@@ -1,0 +1,21 @@
+<style>
+  #wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<div id="wrap">
+  <audio controls id="audio"></audio>
+</div>
+
+<script type="module">
+  let id = "$ID";
+  let options = window.screenOptions[id];
+  let audioElem = options.document.getElementById("audio");
+  audioElem.src = options.url;
+  audioElem.play();
+</script>
