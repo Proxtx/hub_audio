@@ -17,5 +17,8 @@
   let options = window.screenOptions[id];
   let audioElem = options.document.getElementById("audio");
   audioElem.src = options.url;
+  if(options.volume) {
+    audioElem.volume = options.volume
+  }
   audioElem.play();
 </script>
